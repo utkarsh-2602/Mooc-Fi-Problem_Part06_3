@@ -1,1 +1,16 @@
-
+import java.util.ArrayList;
+public class MessagingService {
+    private ArrayList<Message> conversation;
+    
+    public MessagingService(){
+        this.conversation = new ArrayList<>();
+    }
+    public void add(Message message){
+        if(message.length()<=280){
+            this.conversation.add(message);
+        }
+    }
+    public ArrayList<Message> getMessages(){
+        return this.conversation;
+    }
+}
